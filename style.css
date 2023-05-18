@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Athiti&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Birthstone&display=swap');
+
+
+* {
+
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    
+    background-color: #F9FBE7;
+}
+
+.main_title{
+
+    display: block;
+    text-align: center;
+    margin-top: 0.5rem;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 1.2rem;
+}
+
+
+.drumzlayout{
+
+    /* Previously tried and failed properties :  |
+                                                 |
+                                                 v   */
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 12rem; */
+
+    /*                   ^
+                         |
+                         |  */
+
+    text-align: center;
+    margin: 10% auto;
+    
+}
+
+.drums{
+
+
+    /* Previously tried and failed properties :  |
+                                                 |
+                                                 v   */
+
+    /* display: flex;
+    justify-content: center;
+    align-items: last baseline; */
+
+    /*                   ^
+                         |
+                         |  */
+
+    display: inline-block;
+    text-align: center ;
+    height: 8rem;
+    width: 8rem;
+    margin: 0rem 1rem 0rem;
+    box-shadow: inset 0 -3rem 3rem rgba(0, 0, 0, 0.1),
+    0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+    border-radius: 5%;
+    font-family: 'Amaranth', sans-serif;
+    font-size: 2rem;
+    color:rgb(219, 189, 119);
+    text-shadow:  0.2rem 0 rgb(228, 46, 119);
+    margin-bottom: 0.7rem;/* To give a gap between the drum button when they turn into different rows */
+    user-select: none; /* To make sure the letters w a s ... dont get selected */
+    position: relative;
+
+    /* outline: none;
+    border: 10px solid #404B69;
+    font-size: 5rem;
+    font-family: 'Arvo', cursive;
+    line-height: 2;
+    font-weight: 900;
+    color: #DA0463;
+    text-shadow: 3px 0 #DBEDF3;
+    border-radius: 15px;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    margin: 10px;
+    background-color: white; */
+    
+}
+
+.buttonText{
+
+    position: absolute;
+    width: 1rem;  /* Used to define the width of the letter which really doesnt affect the text width but makes a box aroudn the text which is of same width for all the letter and starts from and end at the same position for all the text so it is easy then to poistion the letter independent of their original/defaut assigned sizes */
+    bottom: 1rem;
+    left: 3rem;
+}
+
+.w{
+
+    background-image: url(./images/tom1.png);
+}
+
+.a{
+
+    background-image: url(./images/tom2.png);
+}
+
+.s{
+
+    background-image: url(./images/tom3.png);
+}
+
+.d{
+
+    background-image: url(./images/tom4.png);
+}
+
+.j{
+
+    background-image: url(./images/crash.png);
+}
+
+.k{
+
+    background-image: url(./images/kick.png);
+}
+
+.l{
+
+    background-image: url(./images/snare.png);
+}
+
+.footer{
+
+    position: fixed;
+    bottom: 0;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+/* Remove the boxshadow on being pressed to give a feeling of beign clicked */
+.pressed{
+
+    box-shadow: none;
+
+}
+
+#passion{
+
+    font-family: 'Alata', sans-serif;
+    font-size: 1.4rem;
+}
+
+#signature{
+
+    font-family: 'Birthstone', cursive;
+    font-size: 1.5rem;
+}
+
+
+/* max width implies  : If [device width] is less than or equal to 600px, then do {…}
+
+   min width implies  : If [device width] is greater than or equal to 600px, then do {…}
+
+   */
+
+@media only screen and (max-width: 768px) 
+{
+
+    /* Remove the text when it comes to tab and mobile sizes */
+    .buttonText{
+
+        display: none;
+    }
+
+}
